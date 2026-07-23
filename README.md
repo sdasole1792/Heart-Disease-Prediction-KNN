@@ -61,6 +61,6 @@ Target:
 
 ## Model Performance
 
-Training Accuracy : 89%
+Training Accuracy : 85%
 
 Testing Accuracy : 86%

@@ -1,0 +1,233 @@
+# class Student():
+#     def funct(self,n:int):
+#         result = []
+#         for i in range(1,n+1):
+#             if i%15==0:
+#                 result.append("FizzBuzz")
+#             elif i%5==0:
+#                 result.append("Buzz")
+#             elif i%3==0:
+#                 result.append("Fizz")
+#             else:
+#                 result.append(i)
+
+#         return result
+
+# a = Student()
+# print(a.funct(15))
+
+
+
+# print("<<<<<------------------------------------------------------------------>>>>>")
+
+# class Solution():
+#     def large(self,nums:list):
+#         largest = nums[0]
+#         second = nums[0]
+#         for i in nums:
+#             if i > largest:
+#                 largest,second =i,largest
+#             elif largest > i > second:
+#                 second = i
+
+#         return second
+
+# a = Solution()
+# print("Second largest number from the series is: ",a.large([1,2,3,4,5,6]))
+
+
+# print("<<<<<--------------------------------------------------------------------->>>>>")
+
+
+# class Solution():
+#     def reverse(self,a):
+#         chars = list(a)
+
+#         left =0
+#         right = len(chars)-1
+#         while left<right:
+#             chars[left],chars[right]=chars[right],chars[left]
+
+#             left+=1
+#             right-=1
+#             reverse = "".join(chars)
+#             return reverse
+
+        
+# obj = Solution()
+# print("Reversed String is: ",obj.reverse('Saurabh'))
+
+
+
+# print("<<<<<--------------------------------------------------------------------->>>>>")
+
+
+
+
+# class Solution():
+#     def palindrome(self,a:str):
+#         chars=list(a)
+
+#         left = 0
+#         right=len(chars)-1
+#         is_palindrome = True
+
+#         while left<right:
+#             if chars[left]!=chars[right]:
+#                 is_palindrome=False
+#                 break
+#             left+=1
+#             right-=1
+
+#         if is_palindrome:
+#             print("Yes It is palindrome")
+#         else:
+#             print("No It is not a palindrome")
+# a = Solution()
+# print(a.palindrome('madam'))
+
+
+# print("<<<<<--------------------------------------------------------------------->>>>>")
+
+
+
+# class Solution():
+#     def vowels(self,a:str):
+#         chars=list(a)
+
+#         vowel=('aeiouAEIOU')
+#         count = 0
+
+#         for i in chars:
+#             if i in vowel:
+#                 count+=1
+
+#         return count
+
+# obj = Solution()
+# print("Number of vowels: ",obj.vowels('SaurabhAsole'))
+
+
+# print("<<<<<--------------------------------------------------------------------->>>>>")
+
+
+
+# class Solution():
+#     def vowels(self,a:str):
+#         chars=list(a)
+
+#         vowel=('aeiouAEIOU')
+#         count = 0
+#         freq={v:0 for v in vowel}
+#         for i in chars:
+#             if i in vowel:
+#                 count+=1
+#             if i in freq:
+#                 freq[i]+=1
+
+#         return count,freq
+        
+        
+
+# obj = Solution()
+# print("Number of vowels: ",obj.vowels('SaurabhAsole'))
+
+
+
+# print("<<<<<--------------------------------------------------------------------->>>>>")
+
+
+
+
+# class Solution():
+#     def sums(self,nums:list):
+#         sum=0
+        
+#         for i in range(0,len(nums)+1):
+#             sum+=i
+#             avg=sum/len(nums)
+
+#         return sum,avg
+
+# obj = Solution()
+# print("Sum and Avg of given list are: ",obj.sums([1,2,3,4,5]))
+
+
+# print("<<<<<--------------------------------------------------------------------->>>>>")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# loan_amount = float(input("Enter loan amount: "))
+# annual_rate = float(input("Enter annual interest rate (%): "))
+# loan_term = int(input("Enter loan term (years): "))
+
+# monthly_rate = annual_rate / (12 * 100)
+
+# total_months = loan_term * 12
+
+# # Calculate EMI
+# emi = (loan_amount * monthly_rate * (1 + monthly_rate) ** total_months) / \
+#       ((1 + monthly_rate) ** total_months - 1)
+
+# # Calculate total pay amount
+# total_pay_amount = emi * total_months
+
+# # Calculate total interest
+# total_interest = total_pay_amount - loan_amount
+
+# print("\n------------- Loan Details -------------")
+# print("Loan Amount\t\t:", round(loan_amount, 2))
+# print("Monthly EMI\t\t:", round(emi, 2))
+# print("Total Pay Amount\t:", round(total_pay_amount, 2))
+# print("Total Interest\t\t:", round(total_interest, 2))
+
+
+
+# print("<<<<<<<<<------------------------------------------------------------------->>>>>>>>>>>>>>")
+
+
+
+# a=int(input("Enter no. : "))
+# b=int(input("Enter no. : "))
+# c=int(input("Enter no. : "))
+
+# if a>b and a>c:
+#     print("Largest number is ",a)
+# elif b>c:
+#     print("Largest number is ",b)
+# else: 
+#     print("Largest number is ",c)
+
+
+
+
+class Solution():
+    def target(self,nums:list,t):
+
+        result=[]
+        n=len(nums)
+        for i in range(0,n-1):
+            
+            if nums[i]+nums[i+1]==t:
+                result.append(nums[i])
+                result.append(nums[i+1])
+                i+=1
+        return result
+
+obj = Solution()
+print("Output is: ",obj.target([2,7,11,15],9))
+
+
+("<<<<<<<<<------------------------------------------------------------------->>>>>>>>>>>>>>")
